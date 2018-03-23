@@ -75,11 +75,11 @@ func main() {
 		if line[0] == doc.Chequeno {
 			// Create the xml we want to insert and add it to the x array
 			st = Strd{
-				Nb:     line[0],
-				RltdDt: line[1],
+				Nb:     line[1],
+				RltdDt: line[2],
 				Cd:     "CINV",
 			}
-			st.RmtdAmt = RmtdAmt{RAName: "Ccy", RmtdAmt: line[2]}
+			st.RmtdAmt = RmtdAmt{RAName: "Ccy", RmtdAmt: line[3]}
 			x = append(x, st)
 		}
 	}
